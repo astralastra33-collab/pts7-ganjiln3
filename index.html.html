@@ -2,29 +2,49 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mengarahkan ke Portal Ujian CBT...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Memuat Server Ujian CBT...</title>
     
-    <!-- Link URL Web App Google Apps Script terbaru Anda -->
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwM00KFLqgH9z66g_yYEGsOVgA-J0xihAwCxLqR52-oEWuyEqJ_wyGQjMIK_YX93u5G/exec">
+    <!-- PENGALIHAN OTOMATIS: Mengarahkan siswa langsung ke server Google Apps Script terbaru -->
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbxaa3DeYM0UMi9rlrrR7WJ4mKJwnfZNHU2tsmWQmXz9eD66AjBZylmmgN_L-GWcCoxB/exec">
     
+    <!-- Eksekusi JavaScript instan sebagai cadangan -->
     <script>
-        window.location.replace("https://script.google.com/macros/s/AKfycbwM00KFLqgH9z66g_yYEGsOVgA-J0xihAwCxLqR52-oEWuyEqJ_wyGQjMIK_YX93u5G/exec");
+        window.location.replace("https://script.google.com/macros/s/AKfycbxaa3DeYM0UMi9rlrrR7WJ4mKJwnfZNHU2tsmWQmXz9eD66AjBZylmmgN_L-GWcCoxB/exec");
     </script>
     
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: #f0f4f8; margin: 0; text-align: center; }
-        .spinner { border: 4px solid #cbd5e1; border-top: 4px solid #2563eb; border-radius: 50%; width: 45px; height: 45px; animation: spin 1s linear infinite; margin-bottom: 20px; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            height: 100vh; background-color: #f0f4f8; margin: 0; text-align: center; padding: 20px;
+        }
+        .spinner { 
+            border: 4px solid #cbd5e1; border-top: 4px solid #2563eb; 
+            border-radius: 50%; width: 50px; height: 50px; 
+            animation: spin 0.8s linear infinite; margin-bottom: 25px; 
+        }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        h2 { color: #0f172a; font-size: 18px; margin-bottom: 8px; font-weight: 700; }
-        p { color: #64748b; font-size: 14px; font-weight: 500; }
+        h2 { color: #0f172a; font-size: 22px; margin-bottom: 10px; font-weight: 800; letter-spacing: -0.5px;}
+        p { color: #64748b; font-size: 15px; font-weight: 500; line-height: 1.5; max-width: 400px;}
+        .secure-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #dcfce7; color: #166534; padding: 6px 12px;
+            border-radius: 20px; font-size: 12px; font-weight: 700;
+            margin-top: 20px;
+        }
         a { color: #2563eb; font-weight: bold; text-decoration: none; }
         a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <div class="spinner"></div>
-    <h2>Menghubungkan ke Server Ujian...</h2>
-    <p>Sistem sedang mengarahkan Anda ke jalur aman. Jika tidak berpindah secara otomatis, <a href="https://script.google.com/macros/s/AKfycbwM00KFLqgH9z66g_yYEGsOVgA-J0xihAwCxLqR52-oEWuyEqJ_wyGQjMIK_YX93u5G/exec">Klik di Sini</a>.</p>
+    <h2>Menyiapkan Database...</h2>
+    <p>Anda sedang dialihkan ke server ujian utama dengan sistem pengumpulan kecepatan tinggi.</p>
+    <p style="font-size: 13px; margin-top: 15px;">Jika tidak dialihkan secara otomatis, <a href="https://script.google.com/macros/s/AKfycbxaa3DeYM0UMi9rlrrR7WJ4mKJwnfZNHU2tsmWQmXz9eD66AjBZylmmgN_L-GWcCoxB/exec">Klik Di Sini</a>.</p>
+    <div class="secure-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        Jalur Aman Terenkripsi
+    </div>
 </body>
 </html>
