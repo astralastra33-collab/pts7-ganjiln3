@@ -1,9 +1,0 @@
-{
-  "name": "sicibinaga-kelas-7-vercel",
-  "version": "97.0.0",
-  "private": true,
-  "description": "SICIBINAGA Kelas 7 (LMS, CBT High-Concurrency, Live Arena & 5 Groq AI) - Vercel Serverless Edition",
-  "engines": {
-    "node": "20.x"
-  }
-}
