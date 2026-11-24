@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
   <title>SICIBINAGA Kelas 7 • TKA Ready — SMPN 3 Bangil</title>
-  <meta name="description" content="Portal Resmi SICIBINAGA Kelas 7 (7A–7H — Hijau Zamrud (Emerald)) UPTD SMP Negeri 3 Bangil. Terintegrasi dengan Dashboard Utama sicibinaga.my.id." />
+  <meta name="description" content="Portal Resmi SICIBINAGA Kelas 7 (7A–7H — Hijau Zamrud (Emerald)) UPTD SMP Negeri 3 Bangil." />
   <meta name="theme-color" content="#0d4738" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -45,7 +45,7 @@
       overscroll-behavior: auto;
     }
 
-    /* IFRAME UTAMA GAS — 100% RESPONSIF TOUCHSCREEN HP & TOUCHPAD DESKTOP */
+    /* IFRAME UTAMA GAS — 100% BERSIH TANPA TOMBOL MELAYANG, LANCAR DI HP & TOUCHPAD */
     #sicibinaga-frame {
       width: 100%;
       height: 100%;
@@ -56,7 +56,7 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    /* SPLASH PRELOADER BENTO SUPERAPP (SINKRON DENGAN DASHBOARD UTAMA) */
+    /* SPLASH PRELOADER BENTO SUPERAPP (HILANG OTOMATIS SAAT APLIKASI SIAP) */
     .sici-splash {
       position: fixed;
       inset: 0;
@@ -201,58 +201,8 @@
       border: none;
       cursor: pointer;
     }
-    .sici-fallback-back {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 9px 14px;
-      border-radius: 12px;
-      background: #ffffff;
-      color: #0d4738;
-      border: 1.5px solid #cbd5e1;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 800;
-    }
 
-    /* PIL KEMBALI KE DASHBOARD UTAMA (HANYA MUNCUL SAAT BELUM LOGIN & STANDALONE) */
-    .sici-home-pill {
-      position: fixed;
-      left: 14px;
-      bottom: calc(14px + env(safe-area-inset-bottom, 0px));
-      z-index: 8000;
-      background: rgba(13, 71, 56, 0.94);
-      color: #ffffff;
-      border: 1.5px solid rgba(242, 107, 10, 0.85);
-      border-radius: 999px;
-      padding: 8px 14px 8px 10px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      font-size: 11.5px;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
-      touch-action: manipulation;
-      transition: transform 0.18s ease, opacity 0.25s ease;
-    }
-    .sici-home-pill:hover {
-      transform: translateY(-2px);
-      background: #046c4e;
-    }
-    .sici-home-pill img {
-      width: 22px;
-      height: 22px;
-      border-radius: 6px;
-      object-fit: cover;
-    }
-    .sici-home-pill.hidden {
-      display: none !important;
-      pointer-events: none !important;
-    }
-
-    /* POP-UP KONFIRMASI MENINGGALKAN SICIBINAGA (TOP-LEVEL ANDROID BACK GUARD) */
+    /* POP-UP KONFIRMASI SAAT TOMBOL BACK / GESTURE BACK ANDROID DITEKAN */
     .sici-exit-backdrop {
       position: fixed;
       inset: 0;
@@ -403,20 +353,11 @@
         <a href="#" id="splashDirectLink" class="sici-fallback-btn" target="_self">
           <i class="fa-solid fa-bolt"></i> Buka Langsung Portal Kelas 7
         </a>
-        <a href="https://sicibinaga.my.id" class="sici-fallback-back">
-          <i class="fa-solid fa-arrow-left"></i> Kembali ke Dashboard Utama
-        </a>
       </div>
     </div>
   </div>
 
-  <!-- 2. TOMBOL MELAYANG KEMBALI KE DASHBOARD UTAMA (HILANG OTOMATIS SAAT LOGIN / EMBED) -->
-  <a href="https://sicibinaga.my.id" class="sici-home-pill" id="siciHomePill" title="Kembali ke Dashboard Utama SICIBINAGA">
-    <img src="favicon.png" alt="SICIBINAGA" />
-    <span><i class="fa-solid fa-arrow-left"></i> Dashboard Utama</span>
-  </a>
-
-  <!-- 3. IFRAME APLIKASI GAS KELAS 7 (TOUCHSCREEN & TOUCHPAD 100% LANCAR) -->
+  <!-- 2. IFRAME APLIKASI GAS KELAS 7 (100% BERSIH TANPA TOMBOL MELAYANG) -->
   <iframe
     id="sicibinaga-frame"
     src="about:blank"
@@ -426,21 +367,21 @@
     title="SICIBINAGA Kelas 7 — SMPN 3 Bangil">
   </iframe>
 
-  <!-- 4. POP-UP KONFIRMASI MENINGGALKAN SICIBINAGA (ANDROID BACK / GESTURE GUARD) -->
+  <!-- 3. POP-UP KONFIRMASI MENINGGALKAN SICIBINAGA (ANDROID BACK / GESTURE GUARD) -->
   <div class="sici-exit-backdrop" id="siciWrapperExitModal" role="dialog" aria-modal="true" onclick="if(event.target===this) stayInsideWrapperApp()">
     <div class="sici-exit-card">
       <div class="sici-exit-icon" id="wrapExitIcon">
         <i class="fa-solid fa-shield-halved" id="wrapExitGlyph"></i>
       </div>
-      <h3 id="wrapExitTitle">Ingin Meninggalkan SICIBINAGA Kelas 7?</h3>
+      <h3 id="wrapExitTitle">Ingin Keluar dari Akun SICIBINAGA?</h3>
       <div class="sici-exit-chip" id="wrapExitChip">Kelas 7 • Sesi Aktif</div>
       <p id="wrapExitDesc">Anda menekan tombol <b>Kembali</b> atau <b>Gesture Back</b>. Sesi Anda masih aktif &mdash; pilih <b>Tetap di SICIBINAGA</b> agar fokus terjaga dan tidak perlu login ulang.</p>
       <div class="sici-exit-actions">
         <button type="button" class="sici-btn-stay" onclick="stayInsideWrapperApp()">
           <i class="fa-solid fa-circle-check"></i> <span id="wrapStayLabel">Tetap di SICIBINAGA Kelas 7</span>
         </button>
-        <button type="button" class="sici-btn-leave" id="wrapLeaveBtn" onclick="leaveToMainDashboard()">
-          <i class="fa-solid fa-house"></i> <span>Kembali ke Dashboard Utama (sicibinaga.my.id)</span>
+        <button type="button" class="sici-btn-leave" id="wrapLeaveBtn" onclick="logoutFromWrapperPopup()">
+          <i class="fa-solid fa-right-from-bracket"></i> <span>Ya, Logout ke Halaman Login Kelas 7</span>
         </button>
       </div>
     </div>
@@ -448,11 +389,10 @@
 
   <script>
     // =========================================================================
-    // KONFIGURASI UTAMA WRAPPER SICIBINAGA KELAS 7 (SINKRON V100 + DASHBOARD)
+    // KONFIGURASI UTAMA WRAPPER SICIBINAGA KELAS 7 (V100-V2 CLEAN — TANPA TOMBOL DASHBOARD UTAMA)
     // WAJIB GANTI URL DI BAWAH DENGAN URL WEB APP GAS (/exec) KELAS 7 ANDA!
     // =========================================================================
-    const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzhgke1yrzubTyVJ_JSnH7-CAqPk7CuJnz2KsTwtvhihNe7njpnFowUDcUdIlGZMyKW9A/exec';
-    const MAIN_DASHBOARD_URL = 'https://sicibinaga.my.id';
+    const GAS_WEB_APP_URL = 'ISI_URL_WEB_APP_GAS_KELAS_7_DISINI';
     const GRADE_LEVEL = '7';
 
     (function () {
@@ -470,21 +410,15 @@
         kelas: rombelParam
       };
       let seq = 1;
-      let isIntentionalExit = false;
 
       const frame = document.getElementById('sicibinaga-frame');
       const splash = document.getElementById('siciSplash');
-      const homePill = document.getElementById('siciHomePill');
       const rombelChip = document.getElementById('splashRombelChip');
       const statusText = document.getElementById('splashStatusText');
       const subText = document.getElementById('splashSubText');
       const fallbackBox = document.getElementById('splashFallbackBox');
       const directLink = document.getElementById('splashDirectLink');
 
-      // Sembunyikan pil "Dashboard Utama" bila dibuka di dalam #inAppOverlay dashboard utama
-      if (isEmbeddedInDashboard && homePill) {
-        homePill.classList.add('hidden');
-      }
       if (rombelParam && rombelChip) {
         rombelChip.textContent = 'Rombel ' + rombelParam;
         rombelChip.classList.add('show');
@@ -493,15 +427,6 @@
       function hideSplash() {
         if (splash && !splash.classList.contains('fade-out')) {
           splash.classList.add('fade-out');
-        }
-      }
-
-      function updateHomePillVisibility() {
-        if (!homePill) return;
-        if (isEmbeddedInDashboard || appState.loggedIn || appState.isExamActive) {
-          homePill.classList.add('hidden');
-        } else {
-          homePill.classList.remove('hidden');
         }
       }
 
@@ -517,7 +442,6 @@
         } catch (e) {}
       }
 
-      // Bangun URL GAS akhir dengan meneruskan ?rombel= & ?user= dari Dashboard Utama
       if (!GAS_WEB_APP_URL || GAS_WEB_APP_URL.indexOf('ISI_URL_WEB_APP_GAS') !== -1) {
         if (statusText) statusText.textContent = 'URL Web App GAS Kelas ' + GRADE_LEVEL + ' Belum Diisi';
         if (subText) subText.textContent = 'Buka index.html wrapper ini, lalu ganti GAS_WEB_APP_URL dengan URL /exec proyek GAS Kelas ' + GRADE_LEVEL + '.';
@@ -541,7 +465,6 @@
         frame.src = finalGasUrl;
       }
 
-      // Tampilkan tombol cadangan jika jaringan lambat (> 7 detik)
       setTimeout(function () {
         if (splash && !splash.classList.contains('fade-out') && fallbackBox) {
           fallbackBox.classList.add('show');
@@ -549,7 +472,7 @@
         }
       }, 7000);
 
-      // Jembatan Komunikasi 2 Arah: GAS <-> Wrapper <-> Dashboard Utama (sicibinaga.my.id)
+      // Jembatan Komunikasi 2 Arah: GAS <-> Wrapper <-> Parent Overlay
       window.addEventListener('message', function (ev) {
         if (!ev || !ev.data || typeof ev.data !== 'object') return;
 
@@ -564,23 +487,11 @@
         if (ev.data.type === 'SICIBINAGA_V99_NAV_STATE') {
           const wasLoggedIn = appState.loggedIn;
           appState = Object.assign({}, appState, ev.data);
-          updateHomePillVisibility();
           if (!isEmbeddedInDashboard && appState.loggedIn && !wasLoggedIn) {
             pushTopCushion(true);
           }
-          // Teruskan ke Dashboard Utama jika dibuka melalui #inAppOverlay
           if (isEmbeddedInDashboard && window.parent) {
             try { window.parent.postMessage(ev.data, '*'); } catch (e) {}
-          }
-          return;
-        }
-
-        if (ev.data.type === 'SICIBINAGA_GO_DASHBOARD') {
-          if (isEmbeddedInDashboard && window.parent) {
-            try { window.parent.postMessage(ev.data, '*'); } catch (e) {}
-          } else {
-            isIntentionalExit = true;
-            window.location.href = MAIN_DASHBOARD_URL;
           }
           return;
         }
@@ -592,7 +503,6 @@
         }
       });
 
-      // Handler Tombol Back / Gesture Back Android (Mode Standalone)
       function openWrapperExitModal() {
         const modal = document.getElementById('siciWrapperExitModal');
         const iconEl = document.getElementById('wrapExitIcon');
@@ -615,7 +525,7 @@
         } else {
           iconEl?.classList.remove('is-exam');
           if (glyph) glyph.className = 'fa-solid fa-shield-halved';
-          if (titleEl) titleEl.textContent = 'Ingin Meninggalkan SICIBINAGA Kelas ' + GRADE_LEVEL + '?';
+          if (titleEl) titleEl.textContent = 'Ingin Keluar dari Akun SICIBINAGA?';
           if (chipEl) chipEl.textContent = appState.name
             ? appState.name + (appState.kelas ? ' • Kelas ' + appState.kelas : '')
             : 'Kelas ' + GRADE_LEVEL + ' • Sesi Aktif';
@@ -631,10 +541,13 @@
         pushTopCushion(false);
       };
 
-      window.leaveToMainDashboard = function () {
+      window.logoutFromWrapperPopup = function () {
         document.getElementById('siciWrapperExitModal')?.classList.remove('active');
-        isIntentionalExit = true;
-        window.location.href = MAIN_DASHBOARD_URL;
+        if (frame && frame.contentWindow) {
+          try { frame.contentWindow.postMessage({ type: 'SICIBINAGA_V100_WRAPPER_LOGOUT' }, '*'); } catch (e) {}
+        }
+        appState.loggedIn = false;
+        appState.isExamActive = false;
       };
 
       window.addEventListener('popstate', function () {
@@ -645,7 +558,7 @@
       });
 
       window.addEventListener('beforeunload', function (e) {
-        if (isIntentionalExit || isEmbeddedInDashboard) return;
+        if (isEmbeddedInDashboard) return;
         if (appState.loggedIn || appState.isExamActive) {
           e.preventDefault();
           e.returnValue = 'Sesi SICIBINAGA Kelas ' + GRADE_LEVEL + ' masih aktif.';
