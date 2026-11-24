@@ -1,0 +1,23 @@
+{
+  "name": "SICIBINAGA Kelas 7 \u2022 SMPN 3 Bangil",
+  "short_name": "SICIBINAGA K7",
+  "description": "Portal Resmi SICIBINAGA Kelas 7 (7A\u20137H \u2014 Hijau Zamrud (Emerald)) UPTD SMP Negeri 3 Bangil.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d4738",
+  "theme_color": "#059669",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-sicibinaga.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
